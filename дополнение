@@ -1,0 +1,88 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    setlocale(LC_ALL, "rus");
+    int otvet;
+    cin >> otvet;
+
+    switch (otvet)
+    {
+    case 1:
+    {
+        int i;
+        int sum = 0;
+        int start, end;
+        cout << "Введите первое число: ";
+        cin >> start;
+        cout << "Введите второе число: ";
+        cin >> end;
+
+        for (i = start; i <= end; i++)
+        {
+            sum += i;
+        }
+
+        double average = static_cast<double>(sum) / (end - start + 1);
+
+        cout << "Сумма чисел в диапазоне: " << sum << endl;
+        cout << "Среднеарифметическое: " << average << endl;
+        break;
+    }
+    case 2:
+    {
+        long long factorial = 1;
+        int i = 1;
+        int number;
+        cout << "Введите число: ";
+        cin >> number;
+
+        for (i = 1; i <= number; i++)
+        {
+            factorial *= i;
+        }
+
+        cout << "Факториал числа " << number << ": " << factorial << endl;
+        break;
+    }
+    case 3:
+    {
+        int i = 0;
+        int length;
+        cout << "Введите длину линии: ";
+        cin >> length;
+
+        for (i = 0; i < length; i++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+        break;
+    }
+    case 4:
+    {
+        int i = 0;
+        int length;
+        char symbol;
+        cout << "Введите длину линии: ";
+        cin >> length;
+        cout << "Введите символ для заполнения: ";
+        cin >> symbol;
+
+        for (i = 0; i < length; i++)
+        {
+            cout << symbol;
+        }
+        cout << endl;
+        break;
+    }
+    default:
+        cout << "Неверный выбор!" << endl;
+        break;
+    }
+
+    return 0;
+}
+
